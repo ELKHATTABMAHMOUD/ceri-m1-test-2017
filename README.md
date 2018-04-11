@@ -1,5 +1,7 @@
 # ceri-m2-test
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/e628b3be443e410dbb4d92a9bd0f60d6)](https://app.codacy.com/app/elkhattab.mahmoud/ceri-m1-test-2017?utm_source=github.com&utm_medium=referral&utm_content=ELKHATTABMAHMOUD/ceri-m1-test-2017&utm_campaign=badger)
+
 ## Resources
 
 ### TP
