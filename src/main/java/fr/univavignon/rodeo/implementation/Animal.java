@@ -9,8 +9,12 @@ public class Animal extends NamedObject implements IAnimal {
 	private boolean endangered ; 
 	private boolean boss ;
 	
-	public Animal(String name){
+	public Animal(String name, int XP, boolean secret, boolean endangered, boolean boss){
 		super(name) ; 
+		this.XP = XP ; 
+		this.secret = secret ; 
+		this.endangered = endangered ; 
+		this.boss = boss ; 
 		
 	}
 
