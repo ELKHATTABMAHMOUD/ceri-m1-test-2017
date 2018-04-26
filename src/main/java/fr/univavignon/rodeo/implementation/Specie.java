@@ -12,10 +12,11 @@ public class Specie extends NamedObject implements ISpecie {
 	private int area ; 
 	private List<IAnimal> animals ; 
 	
-	public Specie(String name, int area ){
+	public Specie(String name, int area, ArrayList<IAnimal> animals ){
 		super(name);
 		this.area = area ; 
 		this.animals= new ArrayList<IAnimal>(10) ; 
+		this.animals = animals ; 
 	}
 	
 	public int getArea() {
