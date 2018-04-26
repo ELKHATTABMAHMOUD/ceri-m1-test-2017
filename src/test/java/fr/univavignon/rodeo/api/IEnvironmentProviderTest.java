@@ -25,10 +25,10 @@ public class IEnvironmentProviderTest {
 		IEnvironment iEnvironment = IEnvironmentTest.getEnvironmentMock();
 		
 		Mockito.when(iEnvProvider.getEnvironment("")).thenReturn(null);
-		Mockito.when(iEnvProvider.getEnvironment("environment 1")).thenReturn(iEnvironment);
+		Mockito.when(iEnvProvider.getEnvironment("environment1")).thenReturn(iEnvironment);
 		
 		List<String> list = new ArrayList<String>(1);
-		list.add("environnment1");
+		list.add("environment1");
 		Mockito.when(iEnvProvider.getAvailableEnvironments()).thenReturn(list);
 		
 		Mockito.doThrow(new IllegalArgumentException("The area cannot be explored")).when(iEnvProvider).getEnvironment(null);

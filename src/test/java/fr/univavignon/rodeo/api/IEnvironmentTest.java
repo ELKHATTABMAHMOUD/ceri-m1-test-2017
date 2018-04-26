@@ -20,7 +20,6 @@ public class IEnvironmentTest {
 		Mockito.when(iEnvir.getName()).thenReturn("environment1");
 		List<ISpecie> ispecies = new ArrayList<ISpecie>(2);
 		ispecies.add(ISpecieTest.getSpecieMock());
-		ispecies.add(ISpecieTest.getSpecieMock());
 		Mockito.when(iEnvir.getSpecies()).thenReturn(ispecies);
 		
 		return iEnvir;
@@ -40,7 +39,7 @@ public class IEnvironmentTest {
 	public void testGetSpecies() {
 		IEnvironment iEnvironment = getEnvironmentInstance();
 		
-		List<ISpecie> iSpecies = new ArrayList<ISpecie>(1);
+		List<ISpecie> iSpecies = new ArrayList<ISpecie>(2);
 		iSpecies.add(ISpecieTest.getSpecieMock());
 		
 		assertEquals(iEnvironment.getSpecies().size(), iSpecies.size());
