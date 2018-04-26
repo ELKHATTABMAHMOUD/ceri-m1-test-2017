@@ -4,7 +4,6 @@ package fr.univavignon.rodeo.api;
 
 import static org.junit.Assert.*;
 import org.junit.* ; 
-import org.mockito.Mock;
 import org.mockito.Mockito;
 
 
@@ -22,7 +21,6 @@ public class IAnimalTest {
 
 	public static IAnimal getAnimalMock() {
 		//I should create a mock for IAnimal 
-		System.out.println(",,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,");
 		IAnimal iAnimal = Mockito.mock(IAnimal.class); 
 		
 		Mockito.when(iAnimal.getXP()).thenReturn(2);

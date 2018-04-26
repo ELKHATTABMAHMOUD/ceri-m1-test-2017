@@ -1,20 +1,10 @@
 package fr.univavignon.rodeo.api;
 
-
-
 import static org.junit.Assert.*;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import junit.framework.TestCase;
-
 import org.junit.* ; 
 import org.mockito.Mockito;
-import org.mockito.Mock ;
-
-import fr.univavignon.rodeo.api.*;
-
 
 
 public class ISpecieTest {
@@ -23,24 +13,21 @@ public class ISpecieTest {
 		
 		ISpecie iSpecie = Mockito.mock(ISpecie.class);
 		IAnimal IAnimal = IAnimalTest.getAnimalInstance();  
-		
 		List<IAnimal> animals = new ArrayList<IAnimal>(1);
 		animals.add(IAnimal);
 		Mockito.when(iSpecie.getAnimals()).thenReturn(animals);
-		
 		Mockito.when(iSpecie.getArea()).thenReturn(2);
 		
 		return iSpecie ; 
 	}
 	
-	public static ISpecie getSpecieInstance() {
+	public ISpecie getSpecieInstance() {
 		return getSpecieMock() ;
 	}
 	
 	@Test 
 	public void testGetArea() {
 		ISpecie iSpecie = getSpecieInstance();
-		
 		assertEquals(iSpecie.getArea(), 2);
 	}
 	

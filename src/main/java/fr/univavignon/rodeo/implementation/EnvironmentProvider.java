@@ -8,27 +8,29 @@ import fr.univavignon.rodeo.api.IEnvironmentProvider;
 
 public class EnvironmentProvider implements IEnvironmentProvider {
 
-	private List<Environment> environments ; 
-	public EnvironmentProvider() {
-		this.environments = new ArrayList<Environment>(10);
+	
+	private List<IEnvironment> environments ; 
+	
+	public EnvironmentProvider(List<IEnvironment> environments) {
+		this.environments = environments ;
 	}
 	public List<String> getAvailableEnvironments() {
 		// TODO Auto-generated method stub
-		ArrayList<String> envirs = new ArrayList<String>(10);
-		for(Environment envir : environments) {
-			envirs.add(envir.getName());
+		ArrayList<String> environments = new ArrayList<String>(10);
+		for(IEnvironment environment : this.environments) {
+			environments.add(environment.getName());
 		}
-		return envirs;
+		return environments;
 	}
 
 	public IEnvironment getEnvironment(String name)
 			throws IllegalArgumentException {
 		
 		// TODO Auto-generated method stub
-		if(name.equals(null))
+		if(name == null)
 			throw new IllegalArgumentException();
 		
-		for(Environment environment : environments) {
+		for(IEnvironment environment : this.environments) {
 			if(environment.getName().equals(name))
 				return environment;
 		}

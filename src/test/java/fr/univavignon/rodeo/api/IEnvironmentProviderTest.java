@@ -19,30 +19,31 @@ public class IEnvironmentProviderTest {
 	
 	
 	
-	public static IEnvironmentProvider getIEnvironmentProviderInstance() {
+	public static IEnvironmentProvider getEnvironmentProviderMock() {
 		
 		IEnvironmentProvider iEnvProvider = Mockito.mock(IEnvironmentProvider.class);
-		IEnvironment iEnvironment = IEnvironmentTest.getEnvironmentInstance();
+		IEnvironment iEnvironment = IEnvironmentTest.getEnvironmentMock();
 		
 		Mockito.when(iEnvProvider.getEnvironment("")).thenReturn(null);
 		Mockito.when(iEnvProvider.getEnvironment("environment 1")).thenReturn(iEnvironment);
 		
-		List<String> list = new ArrayList<String>(2);
-		list.add("Environnment1");
-		list.add("Environnment2");
+		List<String> list = new ArrayList<String>(1);
+		list.add("environnment1");
 		Mockito.when(iEnvProvider.getAvailableEnvironments()).thenReturn(list);
 		
 		Mockito.doThrow(new IllegalArgumentException("The area cannot be explored")).when(iEnvProvider).getEnvironment(null);
 		
 		return iEnvProvider ;
 	}
+	public IEnvironmentProvider getEnvironmentProviderInstance() {
+		return getEnvironmentProviderMock();
+	}
 	
 	@Test 
 	public void getAvailableEnvironmentsTest() {
-		IEnvironmentProvider iEnvProvider = getIEnvironmentProviderInstance();
+		IEnvironmentProvider iEnvProvider = getEnvironmentProviderInstance();
 		List<String> list = new ArrayList<String>(2);
-		list.add("Environnment1");
-		list.add("Environnment2");
+		list.add("environment1");
 		assertEquals(iEnvProvider.getAvailableEnvironments(), list);
 		
 	}
@@ -50,10 +51,10 @@ public class IEnvironmentProviderTest {
 	@Test 
 	public void testGetEnvironment() {
 		
-		IEnvironmentProvider iEnvProvider = getIEnvironmentProviderInstance();
+		IEnvironmentProvider iEnvProvider = getEnvironmentProviderInstance();
 		assertEquals(iEnvProvider.getEnvironment(""), null);
-		IEnvironment IEnvironment = IEnvironmentTest.getEnvironmentInstance();
-		assertEquals(iEnvProvider.getEnvironment("environment 1").getName(), IEnvironment.getName());
+		IEnvironment IEnvironment = IEnvironmentTest.getEnvironmentMock();
+		assertEquals(iEnvProvider.getEnvironment("environment1").getName(), IEnvironment.getName());
 		
 	}
 	
@@ -63,7 +64,7 @@ public class IEnvironmentProviderTest {
 	 */
 	@Test(expected = IllegalArgumentException.class)
 	public void testGetEnvironmentException() {
-		IEnvironmentProvider iEnvProvider = getIEnvironmentProviderInstance();
+		IEnvironmentProvider iEnvProvider = getEnvironmentProviderInstance();
 		iEnvProvider.getEnvironment(null);
 	}
 

@@ -7,34 +7,29 @@ import static org.junit.Assert.*;
 import java.util.ArrayList;
 import java.util.List;
 
-import junit.framework.TestCase;
-
 import org.junit.* ; 
 import org.mockito.Mockito;
-import fr.univavignon.rodeo.api.*;
-
-
 
 public class IEnvironmentTest {
 	
 	public static IEnvironment getEnvironmentMock() {
 		//I should create a mock for IAnimal 
+		
 		IEnvironment iEnvir = Mockito.mock(IEnvironment.class) ;
-		
 		Mockito.when(iEnvir.getAreas()).thenReturn(2);
-		
+		Mockito.when(iEnvir.getName()).thenReturn("environment1");
 		List<ISpecie> ispecies = new ArrayList<ISpecie>(2);
-		ispecies.add(ISpecieTest.getSpecieInstance());
-		ispecies.add(ISpecieTest.getSpecieInstance());
-		
+		ispecies.add(ISpecieTest.getSpecieMock());
+		ispecies.add(ISpecieTest.getSpecieMock());
 		Mockito.when(iEnvir.getSpecies()).thenReturn(ispecies);
 		
 		return iEnvir;
 		
 	}
-	public static IEnvironment getEnvironmentInstance() {
+	public IEnvironment getEnvironmentInstance() {
 		return getEnvironmentMock();
 	}
+	
 	@Test 
 	public void testGetAreas() {
 		IEnvironment IEnvironment =  getEnvironmentInstance(); 
@@ -44,13 +39,12 @@ public class IEnvironmentTest {
 	@Test 
 	public void testGetSpecies() {
 		IEnvironment iEnvironment = getEnvironmentInstance();
-
-		List<ISpecie> iSpecies = new ArrayList<ISpecie>(2);
-		iSpecies.add(ISpecieTest.getSpecieInstance());
-		iSpecies.add(ISpecieTest.getSpecieInstance());
+		
+		List<ISpecie> iSpecies = new ArrayList<ISpecie>(1);
+		iSpecies.add(ISpecieTest.getSpecieMock());
 		
 		assertEquals(iEnvironment.getSpecies().size(), iSpecies.size());
-		for(int i=0 ; i< 2 ; i++) {
+		for(int i= 0 ; i< iSpecies.size() ; i++) {
 			assertEquals(iEnvironment.getSpecies().get(i).getName(), iSpecies.get(i).getName());
 			assertEquals(iEnvironment.getSpecies().get(i).getArea(), iSpecies.get(i).getArea());
 		}

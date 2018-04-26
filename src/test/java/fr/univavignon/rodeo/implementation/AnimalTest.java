@@ -10,27 +10,22 @@ import org.mockito.Mockito;
 
 import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.IAnimalTest;
+import fr.univavignon.rodeo.api.INamedObjectTest;
 import fr.univavignon.rodeo.implementation.Animal;
 
 
 
 public class AnimalTest extends IAnimalTest {
 	
-	
-//	private Animal animal ; 
 	/**
 	 * this method provides a mock instance of IAnimal and it will
 	 * be used in every method to create an IAnimal instance 
 	 */
 	
 	public static IAnimal getAnimalInstance() {
-		System.out.println("????????????? ????????????????");
-		IAnimal animal = new Animal("animal1",2,true,false,true);
+		IAnimal animal = new Animal("taureau",2,true,false,true);
 		return animal ;
 	}
-
-	
-	//Then create a testMethod for every IAnimal's method. 
 	
 	@Test
 	public void testGetXP(){
