@@ -4,9 +4,6 @@ import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 import org.mockito.Mockito;
-
-import fr.univavignon.rodeo.api.IAnimal;
-import fr.univavignon.rodeo.api.IGameState;
 import fr.univavignon.rodeo.api.INamedObject;
 
 public class INamedObjectTest {

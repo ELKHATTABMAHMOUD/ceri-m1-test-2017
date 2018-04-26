@@ -1,19 +1,10 @@
 package fr.univavignon.rodeo.implementation;
 
-
-
 import static org.junit.Assert.*;
 import org.junit.* ; 
-import org.mockito.Mock;
-import org.mockito.Mockito;
-
-
 import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.IAnimalTest;
-import fr.univavignon.rodeo.api.INamedObjectTest;
 import fr.univavignon.rodeo.implementation.Animal;
-
-
 
 public class AnimalTest extends IAnimalTest {
 	

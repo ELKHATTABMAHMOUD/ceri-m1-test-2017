@@ -1,17 +1,7 @@
 package fr.univavignon.rodeo.implementation;
 
-
-
-import static org.junit.Assert.*;
-
 import java.util.ArrayList;
 import java.util.List;
-
-import junit.framework.TestCase;
-
-import org.junit.* ; 
-import org.mockito.Mockito;
-
 import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.IEnvironmentProvider;
 import fr.univavignon.rodeo.api.IEnvironmentProviderTest;

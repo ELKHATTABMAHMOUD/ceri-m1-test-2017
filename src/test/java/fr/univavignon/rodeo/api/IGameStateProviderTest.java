@@ -3,12 +3,8 @@ package fr.univavignon.rodeo.api;
 
 
 import static org.junit.Assert.*;
-import junit.framework.TestCase;
-
 import org.junit.* ; 
 import org.mockito.Mockito;
-
-import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.IGameState;
 import fr.univavignon.rodeo.api.IGameStateProvider;
 
