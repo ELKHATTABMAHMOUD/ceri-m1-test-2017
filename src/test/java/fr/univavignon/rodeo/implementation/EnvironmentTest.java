@@ -6,8 +6,11 @@ import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.IEnvironmentTest;
 import fr.univavignon.rodeo.api.ISpecie;
 
-
-
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
 public class EnvironmentTest extends IEnvironmentTest {
 	
 	/**

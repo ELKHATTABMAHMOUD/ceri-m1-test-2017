@@ -2,6 +2,11 @@ package fr.univavignon.rodeo.implementation;
 
 import fr.univavignon.rodeo.api.IAnimal;
 
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
 public class Animal extends NamedObject implements IAnimal {
 	 
 	private int XP ; 

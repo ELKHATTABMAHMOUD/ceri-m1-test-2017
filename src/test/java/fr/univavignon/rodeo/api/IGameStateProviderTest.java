@@ -9,10 +9,14 @@ import fr.univavignon.rodeo.api.IGameState;
 import fr.univavignon.rodeo.api.IGameStateProvider;
 
 
-
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
 public class IGameStateProviderTest {
 	
-	private static IGameState	iGameState = IGameStateTest.getGameStateInstance();
+	private static IGameState	iGameState = IGameStateTest.getGameStateMock();
 	private static IGameStateProvider	iGameStateProvider ;
 	
 	public static IGameStateProvider getGameStateProviderMock() {
@@ -24,7 +28,7 @@ public class IGameStateProviderTest {
 		
 		return iGameStateProvider ;
 	}
-	public static IGameStateProvider getGameStateProviderInstance() {
+	public IGameStateProvider getGameStateProviderInstance() {
 		return getGameStateProviderMock();
 	}
 	

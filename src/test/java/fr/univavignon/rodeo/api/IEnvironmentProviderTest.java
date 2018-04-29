@@ -12,8 +12,12 @@ import org.mockito.Mockito;
 import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.IEnvironmentProvider;
 
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
 public class IEnvironmentProviderTest {
-	
 	
 	
 	public static IEnvironmentProvider getEnvironmentProviderMock() {

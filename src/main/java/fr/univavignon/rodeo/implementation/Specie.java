@@ -6,6 +6,11 @@ import java.util.List;
 import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.ISpecie;
 
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
 public class Specie extends NamedObject implements ISpecie {
 
 	

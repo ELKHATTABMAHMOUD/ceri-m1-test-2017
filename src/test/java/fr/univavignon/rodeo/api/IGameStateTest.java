@@ -8,6 +8,11 @@ import org.mockito.Mockito;
 import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.IGameState;
 
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
 
 public class IGameStateTest {
 	
@@ -31,12 +36,12 @@ public class IGameStateTest {
 		Mockito.doThrow(new IllegalArgumentException("The argument is null"))
         .when(iGameState).getSpecieLevel(null);
 		
-		Mockito.when(iGameState.getProgression()).thenReturn(2);
+		Mockito.when(iGameState.getProgression()).thenReturn(10);
 		
 		return iGameState ;
 	}
 	
-	public static IGameState getGameStateInstance() {
+	public IGameState getGameStateInstance() {
 		return getGameStateMock();
 	}
 	
@@ -71,10 +76,7 @@ public class IGameStateTest {
 	@Test
 	public void testgetProgression(){	
 		iGameState = getGameStateInstance();
-		assertEquals(iGameState.getProgression(), 2);
+		assertEquals(iGameState.getProgression(), 10);
 	}
 	
-	
-	
-
 }

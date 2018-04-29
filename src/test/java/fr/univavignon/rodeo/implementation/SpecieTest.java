@@ -7,6 +7,11 @@ import fr.univavignon.rodeo.api.IAnimalTest;
 import fr.univavignon.rodeo.api.ISpecie;
 import fr.univavignon.rodeo.api.ISpecieTest;
 
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
 public class SpecieTest extends ISpecieTest {
 	
 	/**

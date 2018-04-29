@@ -6,6 +6,11 @@ import org.junit.Test;
 import org.mockito.Mockito;
 import fr.univavignon.rodeo.api.INamedObject;
 
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
 public class INamedObjectTest {
 	
 	public static INamedObject getNamedObjectMock() {

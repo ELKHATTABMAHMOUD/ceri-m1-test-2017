@@ -7,6 +7,12 @@ import fr.univavignon.rodeo.api.IEnvironmentProvider;
 import fr.univavignon.rodeo.api.IEnvironmentProviderTest;
 import fr.univavignon.rodeo.api.IEnvironmentTest;
 
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
+
 public class EnvironmentProviderTest extends IEnvironmentProviderTest {
 	
 	

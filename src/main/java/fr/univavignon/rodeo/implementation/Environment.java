@@ -5,6 +5,11 @@ import java.util.List;
 import fr.univavignon.rodeo.api.IEnvironment;
 import fr.univavignon.rodeo.api.ISpecie;
 
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
 public class Environment extends NamedObject implements IEnvironment {
 
 	private int areas ; 

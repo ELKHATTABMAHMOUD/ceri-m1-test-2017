@@ -6,6 +6,11 @@ import fr.univavignon.rodeo.api.IAnimal;
 import fr.univavignon.rodeo.api.IAnimalTest;
 import fr.univavignon.rodeo.implementation.Animal;
 
+/**
+ * 
+ * @author EL-KHATTAB MAHMOUD
+ *
+ */
 public class AnimalTest extends IAnimalTest {
 	
 	/**
