@@ -1,10 +1,7 @@
 package fr.univavignon.rodeo.api;
 
-import static org.junit.Assert.*;
-import java.util.ArrayList;
-import java.util.List;
-import org.junit.* ; 
-import org.mockito.Mockito;
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
 
 /**
  * 
