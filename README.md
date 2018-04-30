@@ -1,6 +1,6 @@
-# ceri-m2-test
+# ceri-m2-test 
 
-#Badges
+## Badges
 
 [![CircleCI](https://circleci.com/gh/ELKHATTABMAHMOUD/ceri-m1-test-2017.svg?style=svg)](https://circleci.com/gh/ELKHATTABMAHMOUD/ceri-m1-test-2017)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c9b8623b251146b1abeca46c52eb617c)](https://www.codacy.com/app/elkhattab.mahmoud/ceri-m1-test-2017?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ELKHATTABMAHMOUD/ceri-m1-test-2017&amp;utm_campaign=Badge_Grade)
