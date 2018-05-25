@@ -11,11 +11,11 @@
 Mahmoud EL KHATTAB
 
 ## Description
-	Le travail demandé consistait dans un premier temps à la réalisation des tests des interfaces donnés. Ensuite, une
-	implémentation des interfaces a été réalisée pour les concrétiser. Ainsi, pour savoir si la réalisation que j'ai réalisée 
-	est conforme à ce qui est demandé, j'ai exécuter dessus des tests que j'ai hérité des tests réalisés au début. 
+	Le travail demandé consistait dans un premier temps à la réalisation des tests des interfaces données au tp. Ensuite, une
+	implémentation des interfaces a été réalisée pour les concrétiser. Ainsi, pour savoir si la réalisation que j'ai réalisé 
+	est conforme à ce qui a été demandé, j'ai exécuté dessus des tests que j'ai hérité des tests réalisés au début. 
 
-Les cas de tests sont séparés dans deux packages différents selon les classes ou les interfaces à tester. 
+	Les cas de tests sont séparés dans deux packages différents selon les classes ou les interfaces à tester. 
 
 	src//main/java
 		fr.univavignon.rodeo.api 				:	les interfaces
@@ -24,9 +24,9 @@ Les cas de tests sont séparés dans deux packages différents selon les classes
 
 
 ### Test des interfaces
-	Les interfaces ont été testés en réalisant pour chacun un cas de test. Chaque cas de test comporte les méthodes 
+	Les interfaces ont été testées en réalisant pour chacun un cas de test. Chaque cas de test comporte les méthodes 
 	de tests correspondantes aux méthodes de l'interface à tester. Il comporte également deux autres méthodes, une 
-	pour la création d'un Mock de l'interface à tester (**getXXXXMock()**) et la deuxième méthode (**getXXXXInstance()**) 
+	pour la création d'un Mock de l'interface à tester ( **getXXXXMock()** ) et la deuxième méthode ( **getXXXXInstance()** ) 
 	permet de récupérer une instancede l'interface à tester en faisant appel à la première.  
 
 	src//test/java
@@ -42,9 +42,9 @@ Les cas de tests sont séparés dans deux packages différents selon les classes
 	src//test/java
 		fr.univavignon.rodeo.implementation 	:	cas de test des implémentations
 		
-	Le test de l'implémentation de chaque interface hérite test réalisé pour ce dernier. Le test d'une classe ne comporte que 
+	Le test de l'implémentation de chaque interface hérite du test réalisé pour ce dernier. Le test d'une classe ne comporte que 
 	la redéfinition de la méthode **getXXXXInstance()**. Au lieu que cette dernière appel la méthode **getXXXXMock()** pour la 
-	création d'un Mock le cas du test de l'interface, elle permet de créer l'objet concrêt  le cas du test de l'implémentation. 
+	création d'un Mock en cas du test de l'interface, elle permet de créer l'objet concrêt en cas du test de l'implémentation. 
 	
 ### External
 
