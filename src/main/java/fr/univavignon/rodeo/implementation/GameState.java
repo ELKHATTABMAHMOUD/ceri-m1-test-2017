@@ -39,21 +39,20 @@ public class GameState extends NamedObject implements IGameState {
 		// TODO Auto-generated method stub
 		if(specie == null)
 			throw new IllegalArgumentException("The parameter has been provided is null");
-		else {		
-			int xpAmount =0;  
-			for(IAnimal animal : specie.getAnimals())
-				xpAmount += animal.getXP();
-			if(xpAmount >= 600)
-				return SpecieLevel.MASTER;
-			else{
-				if(xpAmount >= 150)
-					return SpecieLevel.CHAMPION;
-				else{
-					if(xpAmount >= 25)
-						return SpecieLevel.WRANGLER;
-				}
-			}
-		}
+				
+		int xpAmount =0;  
+		for(IAnimal animal : specie.getAnimals())
+			xpAmount += animal.getXP();
+		
+		if(xpAmount >= 600)
+			return SpecieLevel.MASTER;
+		else
+			if(xpAmount >= 150)
+				return SpecieLevel.CHAMPION;
+			else
+				if(xpAmount >= 25)
+					return SpecieLevel.WRANGLER;
+		
 		return SpecieLevel.NOVICE;		
 		
 	}

@@ -73,6 +73,12 @@ public class IGameStateTest {
 		iGameState.getSpecieLevel(null);
 	}
 	
+	public void testGetSpecieLevelNoException() {
+		iGameState = getGameStateInstance();
+		ISpecie specie = ISpecieTest.getSpecieMock();
+		iGameState.getSpecieLevel(specie);
+	}
+	
 	@Test
 	public void testgetProgression(){	
 		iGameState = getGameStateInstance();
