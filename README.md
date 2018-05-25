@@ -11,26 +11,27 @@
 Mahmoud EL KHATTAB
 
 ## Description
-
-Le travail demandé consistait dans un premier temps à la réalisation des tests des interfaces donnés. Ensuite, une implémentation des interfaces a été réalisée pour les concrétiser. Ainsi, pour savoir si la réalisation que j'ai réalisée est conforme à ce qui est demandé, j'ai exécuter dessus des tests que j'ai hérité des tests réalisés au début. 
+	Le travail demandé consistait dans un premier temps à la réalisation des tests des interfaces donnés. Ensuite, une implémentation des interfaces a été réalisée pour les concrétiser. Ainsi, pour savoir si la réalisation que j'ai réalisée est conforme à ce qui est demandé, j'ai exécuter dessus des tests que j'ai hérité des tests réalisés au début. 
 
 Les cas de tests sont séparés dans deux packages différents selon les classes ou les interfaces à tester. 
 
-src//main/java
-	fr.univavignon.rodeo.api 				:	les interfaces
-	fr.univavignon.rodeo.implementation 	:	l'implémentation réalisée
+	src//main/java
+		fr.univavignon.rodeo.api 				:	les interfaces
+		fr.univavignon.rodeo.implementation 	:	l'implémentation réalisée
 	
 
 
 ### Test des interfaces
-
-Les interfaces ont été testés en réalisant pour chacun un cas de test. Chaque cas de test comporte les méthodes de tests correspondantes aux méthodes de l'interface à tester. Il comporte également deux autres méthodes, une pour la création d'un Mock de l'interface à tester (getXXXXMock()) et la deuxième méthode (getXXXXInstance()) permet de récupérer une instance de l'interface à tester en faisant appel à la première.  
+	Les interfaces ont été testés en réalisant pour chacun un cas de test. Chaque cas de test comporte les méthodes de tests 
+	correspondantes aux méthodes de l'interface à tester. Il comporte également deux autres méthodes, une pour la création 
+	d'un Mock de l'interface à tester (**getXXXXMock()**) et la deuxième méthode (**getXXXXInstance()**) permet de récupérer une instance
+	de l'interface à tester en faisant appel à la première.  
 
 src//test/java
 	fr.univavignon.rodeo.api 				:  	cas de test pour les interfaces 
  
 ### Implémentation
-	L'implémentation réalisée pour chacun des interfaces est présente sous le package :
+	L'implémentation réalisée pour chacune des interfaces est présente sous le package :
 	src//test/java
 		fr.univavignon.rodeo.implementation 
 	
@@ -39,7 +40,9 @@ src//test/java
 	src//test/java
 		fr.univavignon.rodeo.implementation 	:	cas de test des implémentations
 		
-	Le test de l'implémentation de chaque interface hérite test réalisé pour ce dernier. Le test d'une classe ne comporte que la redéfinition de la méthode getXXXXInstance(). Au lieu que cette dernière appel la méthode getXXXXMock() pour la création d'un Mock le cas du test de l'interface, elle permet de créer l'objet concrêt  le cas du test de l'implémentation. 
+	Le test de l'implémentation de chaque interface hérite test réalisé pour ce dernier. Le test d'une classe ne comporte que 
+	la redéfinition de la méthode **getXXXXInstance()**. Au lieu que cette dernière appel la méthode **getXXXXMock()** pour la 
+	création d'un Mock le cas du test de l'interface, elle permet de créer l'objet concrêt  le cas du test de l'implémentation. 
 	
 ### External
 
