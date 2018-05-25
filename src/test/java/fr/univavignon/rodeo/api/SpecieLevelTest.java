@@ -1,9 +1,14 @@
 package fr.univavignon.rodeo.api;
 
+<<<<<<< HEAD
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
+=======
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+>>>>>>> cf7478eee90dfc3e534b573528e69d448453f04a
 
 /**
  * 
