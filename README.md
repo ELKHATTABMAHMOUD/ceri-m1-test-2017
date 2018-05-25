@@ -6,16 +6,41 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/c9b8623b251146b1abeca46c52eb617c)](https://www.codacy.com/app/elkhattab.mahmoud/ceri-m1-test-2017?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=ELKHATTABMAHMOUD/ceri-m1-test-2017&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/ELKHATTABMAHMOUD/ceri-m1-test-2017/branch/master/graph/badge.svg)](https://codecov.io/gh/ELKHATTABMAHMOUD/ceri-m1-test-2017)
 
+## Author
 
-## Resources
+Mahmoud EL KHATTAB
 
-### TP
+## Description
 
-- [API javadoc](http://faylixe.fr/ceri-m1-test-2017/javadoc)
-- [TP1 : Setup the environment](https://github.com/Faylixe/ceri-m2-test-2017/blob/master/docs/tp1.md)
-- [TP2 : Continous integration and quality assesment](https://github.com/Faylixe/ceri-m2-test-2017/blob/master/docs/tp2.md)
-- [TP3 : Unit testing](https://github.com/Faylixe/ceri-m2-test-2017/blob/master/docs/tp3.md)
+Le travail demandé consistait dans un premier temps à la réalisation des tests des interfaces donnés. Ensuite, une implémentation des interfaces a été réalisée pour les concrétiser. Ainsi, pour savoir si la réalisation que j'ai réalisée est conforme à ce qui est demandé, j'ai exécuter dessus des tests que j'ai hérité des tests réalisés au début. 
 
+Les cas de tests sont séparés dans deux packages différents selon les classes ou les interfaces à tester. 
+
+src//main/java
+	fr.univavignon.rodeo.api 				:	les interfaces
+	fr.univavignon.rodeo.implementation 	:	l'implémentation réalisée
+	
+
+
+### Test des interfaces
+
+Les interfaces ont été testés en réalisant pour chacun un cas de test. Chaque cas de test comporte les méthodes de tests correspondantes aux méthodes de l'interface à tester. Il comporte également deux autres méthodes, une pour la création d'un Mock de l'interface à tester (getXXXXMock()) et la deuxième méthode (getXXXXInstance()) permet de récupérer une instance de l'interface à tester en faisant appel à la première.  
+
+src//test/java
+	fr.univavignon.rodeo.api 				:  	cas de test pour les interfaces 
+ 
+### Implémentation
+	L'implémentation réalisée pour chacun des interfaces est présente sous le package :
+	src//test/java
+		fr.univavignon.rodeo.implementation 
+	
+### Test de l'implémentation
+	les tests de l'implémentation sont rassemblés sous le package 
+	src//test/java
+		fr.univavignon.rodeo.implementation 	:	cas de test des implémentations
+		
+	Le test de l'implémentation de chaque interface hérite test réalisé pour ce dernier. Le test d'une classe ne comporte que la redéfinition de la méthode getXXXXInstance(). Au lieu que cette dernière appel la méthode getXXXXMock() pour la création d'un Mock le cas du test de l'interface, elle permet de créer l'objet concrêt  le cas du test de l'implémentation. 
+	
 ### External
 
 - [JUnit 5 documentation](http://junit.org/junit5/docs/current/user-guide)
